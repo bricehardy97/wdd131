@@ -1,12 +1,12 @@
 body{
     font-family: "Roboto", sans-serif;
+
 }
 header, main, footer{
     max-width: 640px;
-    margin: 1 rem auto;
-    border: 1 px solid #bbb;
-    padding: 1 rem;
-    background-color: #e6f2ff;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
 
 
 }
@@ -19,4 +19,13 @@ main{
 section{
     padding: 1rem;
     background-color: #fff;
+    border: 5px dotted #bbb;
+    border-radius: 10px;
+}
+html{
+    display:flex;
+    justify-content: center;
+}
+header,footer{
+    background-color: #e6f2ff;
 }
