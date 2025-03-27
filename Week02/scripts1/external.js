@@ -4,11 +4,16 @@ const list = document.querySelector('#list');
 console.log(input,button,list);
 
 
-const li = document.createElement('li');
-const deleteButton = document.createElement('button');
-li.textContent = input.value;
-deleteButton.textContent = '❌';
-li.append(deleteButton);
-list.append(li);
+
+button.addEventListener('click', function(){
+    console.log("its time")
+    const li = document.createElement('li');
+    const deleteButton = document.createElement('button');
+    li.textContent = input.value;
+    deleteButton.textContent = '❌';
+    li.append(deleteButton);
+    list.append(li);
+    input.value = "";
+});
 
 
