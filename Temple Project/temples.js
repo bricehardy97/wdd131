@@ -1,7 +1,4 @@
 
-
-
-
 function setYear() {
     const currentYear = document.getElementById("currentyear");
 
@@ -23,6 +20,20 @@ function setup(){
     
     setYear();
     setLastModified();
+    setupNavigation();
+}
+
+function menuButtonCallBack() {
+    
+    document.getElementById("click").style.display = "flex";
+    // change dislay of the nav element
+
+}
+
+function setupNavigation(){
+    const button=document.querySelector("#Hamburger")
+    button.addEventListener("click", menuButtonCallBack );
+    
 }
 
 setup();
