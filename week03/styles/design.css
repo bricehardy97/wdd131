@@ -50,7 +50,8 @@ h3 {
 .callout {
 	color: #000000;
 	background-color: #d8dae0;
-	padding: 1rem
+	padding: 1rem;
+	grid-column: span 2;
 }
 
 footer {
