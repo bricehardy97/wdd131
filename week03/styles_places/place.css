@@ -1,0 +1,79 @@
+
+h1{
+
+    text-align: center;
+    background-color: olive;
+    padding: 20px;
+
+}
+body{
+  margin: 70px;
+
+
+}
+.information-list{
+    display:grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    .bold {
+        text-align: right;
+    }
+    :not(.bold){
+        text-align: left ;
+    }
+}
+
+.bold{
+    font-weight: 700;
+}
+section{
+    text-align: center;
+}
+img{
+    width: 100%;
+    height:auto;
+}
+#icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+/*=========== Desktop =============*/
+@media screen and (min-width: 800px){
+    section{
+        position: absolute;
+        background-color: rgb(97, 97, 148);
+        margin: 10px;
+        h2{
+            background-color: coral;
+            margin-left:-10px;
+            margin-right: 10px;
+        }
+
+    }
+    #weather{
+        right:0px;
+        bottom: 0px;
+    }
+    #data{
+        top:0px;
+    }
+    main{
+        position:relative;
+    }
+
+    
+    
+    header{
+        background-color: aquamarine;
+    }
+    
+
+}
+footer{
+    text-align: center;
+}
+
