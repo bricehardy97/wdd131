@@ -2,7 +2,7 @@
 h1{
 
     text-align: center;
-    background-color: olive;
+    background-color: rgb(87, 149, 24);
     padding: 20px;
 
 }
@@ -45,10 +45,11 @@ img{
 @media screen and (min-width: 800px){
     section{
         position: absolute;
-        background-color: rgb(97, 97, 148);
-        margin: 10px;
+        background-color: rgb(87, 149, 24);
+        margin: 20px;
+        opacity: 50%;
         h2{
-            background-color: coral;
+            background-color: rgb(241, 40, 14);
             margin-left:-10px;
             margin-right: 10px;
         }
@@ -63,17 +64,21 @@ img{
     }
     main{
         position:relative;
+        
     }
 
     
     
     header{
-        background-color: aquamarine;
+        background-color: rgb(87, 149, 24);
+        height:75px;
     }
     
 
 }
 footer{
     text-align: center;
+    background-color: rgb(251, 217, 20);
+    height:100px;
 }
 
