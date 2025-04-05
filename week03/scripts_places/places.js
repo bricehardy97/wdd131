@@ -39,10 +39,6 @@ function setup(){
     const windSpedMPH = 0.5;
     const isCelcius = true;
 
-    if (??? && ??? && ){
-        const calculatedWindChill = calculateWindChill(windSpedMPH, tempF)
-        insertWindChill(calculatedWindChill);
-    }
 }
 
 // ENTRY POINT
