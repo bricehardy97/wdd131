@@ -20,8 +20,7 @@ body{
         text-align: right;
     }
     :not(.bold){
-        text-align: left ;
-    }
+        text-align: left ;}
 }
 
 .bold{
@@ -51,9 +50,7 @@ img{
         h2{
             background-color: rgb(241, 40, 14);
             margin-left:-10px;
-            margin-right: 10px;
-            
-          }
+            margin-right: 10px;}
 
     }
     #weather{
@@ -83,7 +80,6 @@ footer{
     background-color: rgb(251, 217, 20);
     height:100px;
     p{
-        margin:0;
-    }
+        margin:0; }
 }
 
