@@ -4,6 +4,7 @@ h1{
     text-align: center;
     background-color: rgb(87, 149, 24);
     padding: 20px;
+    margin-bottom: 0;
 
 }
 body{
@@ -31,7 +32,7 @@ section{
 }
 img{
     width: 100%;
-    height:auto;
+    height: auto;
 }
 #icon{
     width: 50px;
@@ -45,14 +46,14 @@ img{
 @media screen and (min-width: 800px){
     section{
         position: absolute;
-        background-color: rgb(87, 149, 24);
+        background-color: rgb(87, 149, 24,.5);
         margin: 20px;
-        opacity: 50%;
         h2{
             background-color: rgb(241, 40, 14);
             margin-left:-10px;
             margin-right: 10px;
-        }
+            
+          }
 
     }
     #weather{
@@ -64,6 +65,7 @@ img{
     }
     main{
         position:relative;
+        overflow: hidden;
         
     }
 
@@ -80,5 +82,8 @@ footer{
     text-align: center;
     background-color: rgb(251, 217, 20);
     height:100px;
+    p{
+        margin:0;
+    }
 }
 
