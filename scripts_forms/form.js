@@ -5,7 +5,6 @@ const products = [
     { id: 4, name: "Product D" }
   ];
   
-  // Populate the product select dropdown dynamically
   const productSelect = document.getElementById("product-name");
   products.forEach(product => {
     const option = document.createElement("option");

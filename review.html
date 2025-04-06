@@ -21,19 +21,18 @@
   </footer>
 
   <script>
-    // Retrieve the current review count from localStorage, or initialize it to 0
+    
     let reviewCount = localStorage.getItem("reviewCount");
     if (!reviewCount) {
       reviewCount = 0;
     }
     
-    // Increment the review count
-    reviewCount++;
     
-    // Update the review count display
+    reviewCount++;
+   
     document.getElementById("review-count").textContent = reviewCount;
     
-    // Store the updated review count in localStorage
+   
     localStorage.setItem("reviewCount", reviewCount);
   </script>
 

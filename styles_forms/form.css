@@ -55,7 +55,7 @@ body {
     text-align: center;
   }
   
-  /* Mobile responsiveness */
+ 
   @media screen and (max-width: 768px) {
     main {
       width: 90%;
