@@ -1,96 +1,139 @@
-
-function setYear() {
-  const currentYear = document.getElementById("currentyear");
-
-  console.log(currentYear.innerHTML);
-  const today = new Date();
-  const year = today.getFullYear();
-  console.log(year);
-  
-  currentYear.innerHTML = year;
-}
-
-function setLastModified() {
-  const lastModified= document.getElementById("lastModified")
-  console.log(lastModified)
-  lastModified.innerHTML = "Date last modified: " + document.lastModified;
-}
-
-function setup(){
-  
-  setYear();
-  setLastModified();
-  setupNavigation();
-}
-
-function menuButtonCallBack() {
-  
-  document.getElementById("click").style.display = "flex";
-  // change dislay of the nav element
-
-}
-
-function setupNavigation(){
-  const button=document.querySelector("#Hamburger")
-  button.addEventListener("click", menuButtonCallBack );
-  
-}
+// Sample Temple data
 const temples = [
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    name: 'Salt Lake Temple',
+    location: 'Salt Lake City, Utah, USA',
+    dateDedicated: '1893-04-06',
+    area: 106000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Salt_Lake_Temple_2018.jpg',
   },
   {
-    templeName: "Manti Utah",
-    location: "Manti, Utah, United States",
-    dedicated: "1888, May, 21",
-    area: 74792,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    name: 'New York Temple',
+    location: 'New York City, New York, USA',
+    dateDedicated: '2004-06-27',
+    area: 28000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/New_York_Temple.jpg',
   },
   {
-    templeName: "Payson Utah",
-    location: "Payson, Utah, United States",
-    dedicated: "2015, June, 7",
-    area: 96630,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    name: 'Palmyra Temple',
+    location: 'Palmyra, New York, USA',
+    dateDedicated: '2000-04-06',
+    area: 15000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Palmyra_Temple.jpg',
   },
   {
-    templeName: "Yigo Guam",
-    location: "Yigo, Guam",
-    dedicated: "2020, May, 2",
-    area: 6861,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    name: 'Los Angeles Temple',
+    location: 'Los Angeles, California, USA',
+    dateDedicated: '1955-06-03',
+    area: 40000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Los_Angeles_Temple.jpg',
   },
   {
-    templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
-    dedicated: "1974, November, 19",
-    area: 156558,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    name: 'Salt Lake City Temple',
+    location: 'Salt Lake City, Utah, USA',
+    dateDedicated: '1893-04-06',
+    area: 106000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Salt_Lake_Temple.jpg',
+  },
+  // Additional temples
+  {
+    name: 'Vancouver Temple',
+    location: 'Vancouver, British Columbia, Canada',
+    dateDedicated: '1955-09-27',
+    area: 27000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Vancouver_Temple.jpg',
   },
   {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
-    dedicated: "1986, January, 10",
-    area: 9600,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    name: 'Nairobi Temple',
+    location: 'Nairobi, Kenya',
+    dateDedicated: '2019-05-17',
+    area: 35000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Nairobi_Temple.jpg',
   },
   {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    name: 'Paris Temple',
+    location: 'Paris, France',
+    dateDedicated: '2017-05-21',
+    area: 38000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Paris_LDS_Temple.jpg',
   },
-]
-setup();
+  {
+    name: 'Ogden Temple',
+    location: 'Ogden, Utah, USA',
+    dateDedicated: '1972-01-01',
+    area: 12000,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Ogden_Temple.jpg',
+  }
+];
+
+// Function to create temple cards
+function createTempleCards(templesArray) {
+  const templesList = document.getElementById('temples-list');
+  templesList.innerHTML = ''; // Clear any existing cards
+
+  templesArray.forEach(temple => {
+    const templeCard = document.createElement('div');
+    templeCard.classList.add('temple-card');
+
+    const templeImage = document.createElement('img');
+    templeImage.src = temple.image;
+    templeImage.alt = `${temple.name} image`;
+    templeImage.loading = 'lazy';
+
+    const templeName = document.createElement('h2');
+    templeName.textContent = temple.name;
+
+    const templeLocation = document.createElement('p');
+    templeLocation.textContent = `Location: ${temple.location}`;
+
+    const templeDate = document.createElement('p');
+    templeDate.textContent = `Dedicated: ${temple.dateDedicated}`;
+
+    const templeArea = document.createElement('p');
+    templeArea.textContent = `Area: ${temple.area} sq ft`;
+
+    templeCard.appendChild(templeImage);
+    templeCard.appendChild(templeName);
+    templeCard.appendChild(templeLocation);
+    templeCard.appendChild(templeDate);
+    templeCard.appendChild(templeArea);
+
+    templesList.appendChild(templeCard);
+  });
+}
+
+// Filter temples based on category
+function filterTemples(category) {
+  let filteredTemples;
+  switch (category) {
+    case 'old':
+      filteredTemples = temples.filter(temple => new Date(temple.dateDedicated).getFullYear() < 1900);
+      break;
+    case 'new':
+      filteredTemples = temples.filter(temple => new Date(temple.dateDedicated).getFullYear() > 2000);
+      break;
+    case 'large':
+      filteredTemples = temples.filter(temple => temple.area > 90000);
+      break;
+    case 'small':
+      filteredTemples = temples.filter(temple => temple.area < 10000);
+      break;
+    default:
+      filteredTemples = temples;
+  }
+  createTempleCards(filteredTemples);
+}
+
+// Add event listeners for menu items
+document.getElementById('home').addEventListener('click', () => filterTemples('home'));
+document.getElementById('old-temples').addEventListener('click', () => filterTemples('old'));
+document.getElementById('new-temples').addEventListener('click', () => filterTemples('new'));
+document.getElementById('large-temples').addEventListener('click', () => filterTemples('large'));
+document.getElementById('small-temples').addEventListener('click', () => filterTemples('small'));
+
+// Display current year and last modified date
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
+
+// Initialize with all temples
+filterTemples('home');

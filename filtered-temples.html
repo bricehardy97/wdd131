@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title> WDD 131- Dynamic Web Fundamentals - Brice Hardy</title>
-        <link rel="stylesheet" href="filtered-temples.css">
-        <meta name="description" content="Brice Hardy, WDD131, The purpose of the page is to...">
-        <meta name="author" content=" Brice Hardy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="filtered-temples.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old-temples">Old</a></li>
+        <li><a href="#" id="new-temples">New</a></li>
+        <li><a href="#" id="large-temples">Large</a></li>
+        <li><a href="#" id="small-temples">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <script src="temples.js" defer>
-        </script>
-    </head>
+  <main>
+    <section id="temples-list"></section>
+  </main>
 
+  <footer>
+    <p>&copy; <span id="year"></span> | Last modified: <span id="last-modified"></span></p>
+  </footer>
 
-    <body>
-        <header>
-            <h1>Temple Album</h1>
-            <button id="Hamburger">=</button>
-            <nav>
-                <a href="#"> Home </a>
-                <a href="#"> Old </a>
-                <a href="#"> New </a>
-                <a href="#"> Large </a>
-                <a href ="#"> Small </a>
-            </nav>
-        </header>
-        <main> 
-            
-           
-            
-        </main>
-        
-     
-
-        <footer>
-
-            <p>&copy;<span id="currentyear">2025</span> 🐍 Brice Hardy 🐍 Utah</p>
-            <p id="lastModified"></p>
-        </footer>
-
-       
-    </body>
-
+  <script src="filtered-temples.js"></script>
+</body>
 </html>
