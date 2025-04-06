@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+</head>
+<body>
+
+  <header>
+    <h1>Thank you for your review!</h1>
+  </header>
+
+  <main>
+    <p>Your review has been successfully submitted.</p>
+    <p>Number of reviews submitted: <span id="review-count">0</span></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Product Reviews</p>
+  </footer>
+
+  <script>
+    // Retrieve the current review count from localStorage, or initialize it to 0
+    let reviewCount = localStorage.getItem("reviewCount");
+    if (!reviewCount) {
+      reviewCount = 0;
+    }
+    
+    // Increment the review count
+    reviewCount++;
+    
+    // Update the review count display
+    document.getElementById("review-count").textContent = reviewCount;
+    
+    // Store the updated review count in localStorage
+    localStorage.setItem("reviewCount", reviewCount);
+  </script>
+
+</body>
+</html>
