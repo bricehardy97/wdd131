@@ -5,7 +5,7 @@ const temples = [
     location: 'Salt Lake City, Utah, USA',
     dateDedicated: '1893-04-06',
     area: 106000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Salt_Lake_Temple_2018.jpg',
+    image: 'https://churchofjesuschristtemples.org/salt-lake-temple/',
   },
   {
     name: 'New York Temple',
