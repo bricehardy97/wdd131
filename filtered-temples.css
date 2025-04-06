@@ -57,6 +57,5 @@ body{
         display:flex;
     }
     button{
-        display:none;
-    }
+        display:none;}
 }
