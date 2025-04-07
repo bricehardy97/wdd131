@@ -19,9 +19,9 @@
   
   
   header {
-    background-color: #ff5a5f;
+    background-color: #5ac8ff;
     padding: 20px 0;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
   }
   
@@ -149,5 +149,81 @@
     #contact form {
       max-width: 100%;
     }
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ff5a5f;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Calendar Section */
+  #calendar {
+    padding: 40px 0;
+    background-color: #fff;
+  }
+  
+  #calendar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #event-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .calendar-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor:
+  
   }
   
