@@ -26,6 +26,9 @@ body {
     color: white;
     text-decoration: none;
   }
+  nav :hover{
+    color: aqua;
+  }
   
   main {
     padding: 20px;
@@ -79,4 +82,5 @@ body {
   h2{
     text-align: center;
   }
+  
   
