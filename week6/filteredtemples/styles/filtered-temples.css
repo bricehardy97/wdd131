@@ -29,7 +29,8 @@ body {
   nav :hover{
     color: aqua;
     background-color: #000000;
-    padding: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   main {
