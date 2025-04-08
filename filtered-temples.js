@@ -1,72 +1,89 @@
-// Sample Temple data
 const temples = [
   {
-    name: 'Salt Lake Temple',
-    location: 'Salt Lake City, Utah, USA',
-    dateDedicated: '1893-04-06',
-    area: 106000,
-    image: 'https://churchofjesuschristtemples.org/salt-lake-temple/',
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005, August, 7",
+    area: 11500,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
-    name: 'New York Temple',
-    location: 'New York City, New York, USA',
-    dateDedicated: '2004-06-27',
-    area: 28000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/New_York_Temple.jpg',
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
   },
   {
-    name: 'Palmyra Temple',
-    location: 'Palmyra, New York, USA',
-    dateDedicated: '2000-04-06',
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "Yigo Guam",
+    location: "Yigo, Guam",
+    dedicated: "2020, May, 2",
+    area: 6861,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974, November, 19",
+    area: 156558,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Lima Perú",
+    location: "Lima, Perú",
+    dedicated: "1986, January, 10",
+    area: 9600,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+  },
+  {
+    templeName: "Mexico City Mexico",
+    location: "Mexico City, Mexico",
+    dedicated: "1983, December, 2",
+    area: 116642,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
+  {
+    templeName: "Fortaleza Brazil ",
+    location: "Fortazela,Brazil",
+    dedicated: "2019, June, 2019",
+    area: 36000,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/fortaleza-brazil-temple/fortaleza-brazil-temple-5569-main.jpg"
+  },
+  {
+    templeName: "Kirtland Temple",
+    location: "Kirtland,Ohio",
+    dedicated: "1836, March, 27",
     area: 15000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Palmyra_Temple.jpg',
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
   },
   {
-    name: 'Los Angeles Temple',
-    location: 'Los Angeles, California, USA',
-    dateDedicated: '1955-06-03',
-    area: 40000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Los_Angeles_Temple.jpg',
+    templeName: "London England",
+    location: "Surrey, England",
+    dedicated: "1958, September, 7-9",
+    area: 42652,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/london-england-temple/london-england-temple-4243-main.jpg"
   },
-  {
-    name: 'Salt Lake City Temple',
-    location: 'Salt Lake City, Utah, USA',
-    dateDedicated: '1893-04-06',
-    area: 106000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Salt_Lake_Temple.jpg',
-  },
-  // Additional temples
-  {
-    name: 'Vancouver Temple',
-    location: 'Vancouver, British Columbia, Canada',
-    dateDedicated: '1955-09-27',
-    area: 27000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Vancouver_Temple.jpg',
-  },
-  {
-    name: 'Nairobi Temple',
-    location: 'Nairobi, Kenya',
-    dateDedicated: '2019-05-17',
-    area: 35000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Nairobi_Temple.jpg',
-  },
-  {
-    name: 'Paris Temple',
-    location: 'Paris, France',
-    dateDedicated: '2017-05-21',
-    area: 38000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Paris_LDS_Temple.jpg',
-  },
-  {
-    name: 'Ogden Temple',
-    location: 'Ogden, Utah, USA',
-    dateDedicated: '1972-01-01',
-    area: 12000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Ogden_Temple.jpg',
-  }
+  
+
 ];
 
-// Function to create temple cards
+
 function createTempleCards(templesArray) {
   const templesList = document.getElementById('temples-list');
   templesList.innerHTML = ''; // Clear any existing cards
@@ -76,18 +93,18 @@ function createTempleCards(templesArray) {
     templeCard.classList.add('temple-card');
 
     const templeImage = document.createElement('img');
-    templeImage.src = temple.image;
-    templeImage.alt = `${temple.name} image`;
+    templeImage.src = temple.imageUrl;
+    templeImage.alt = `${temple.templeName} image`;
     templeImage.loading = 'lazy';
 
     const templeName = document.createElement('h2');
-    templeName.textContent = temple.name;
+    templeName.textContent = temple.templeName;
 
     const templeLocation = document.createElement('p');
     templeLocation.textContent = `Location: ${temple.location}`;
 
     const templeDate = document.createElement('p');
-    templeDate.textContent = `Dedicated: ${temple.dateDedicated}`;
+    templeDate.textContent = `Dedicated: ${temple.dedicated}`;
 
     const templeArea = document.createElement('p');
     templeArea.textContent = `Area: ${temple.area} sq ft`;
@@ -102,15 +119,16 @@ function createTempleCards(templesArray) {
   });
 }
 
-// Filter temples based on category
 function filterTemples(category) {
+  // THIS SPOT WILL ALWAYS BE RUN/EXECUTED
+  console.log(category);
   let filteredTemples;
   switch (category) {
     case 'old':
-      filteredTemples = temples.filter(temple => new Date(temple.dateDedicated).getFullYear() < 1900);
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
       break;
     case 'new':
-      filteredTemples = temples.filter(temple => new Date(temple.dateDedicated).getFullYear() > 2000);
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
       break;
     case 'large':
       filteredTemples = temples.filter(temple => temple.area > 90000);
@@ -124,7 +142,7 @@ function filterTemples(category) {
   createTempleCards(filteredTemples);
 }
 
-// Add event listeners for menu items
+
 document.getElementById('home').addEventListener('click', () => filterTemples('home'));
 document.getElementById('old-temples').addEventListener('click', () => filterTemples('old'));
 document.getElementById('new-temples').addEventListener('click', () => filterTemples('new'));
