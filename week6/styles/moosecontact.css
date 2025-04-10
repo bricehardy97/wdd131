@@ -1,0 +1,194 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #1fd149;
+  padding: 1rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+  
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-content: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  #formStatus {
+    margin-top: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100; }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh; /* Adjust based on desired vertical space */
+
+  }/* Instagram Section */
+  .follow-instagram {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fdf4f4;
+    margin-top: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .follow-instagram h2 {
+    font-size: 1.6rem;
+    color: #dd1c1c;
+    margin-bottom: 0.5rem;
+  }
+  
+  .follow-instagram p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .insta-btn {
+    background-color: #dd1c1c;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .insta-btn:hover {
+    background-color: #870505;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+  }
+  
+  .footer-links {
+    margin: 1rem 0;
+  }
+  
+  .footer-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #555;
+  }
+  
+  /* Accessibility and Button Focus */
+  .btn:hover,
+  .signup button:hover {
+    background-color: #0097a7;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  button:focus,
+  .btn:focus {
+    outline: 2px solid #004d40;
+    outline-offset: 2px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 1.4rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .flavor-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .signup form {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+  

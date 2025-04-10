@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Menu of Shaved Ice Flavors at the Mobile Trailer">
-  <title>Shaved Ice Menu</title>
-  <link rel="stylesheet" href="moose.css">
-</head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>Shaved Ice Mobile Trailer</h1>
-      <nav>
-        <ul>
-          <li><a href="mooseindex.html">Home</a></li>
-          <li><a href="moosemenu.html">Menu</a></li>
-          <li><a href="moosecontact.html">Contact</a></li>
-          <li><a href="mooseschedule.html">Event Calendar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id="menu">
-    <div class="container">
-      <h2>Our Menu</h2>
-      <div id="menu-items">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Moose's Ice Hut</title>
+        <link rel="stylesheet" href="styles/moosemenu.css" />
+      </head>
+      <body>
       
+        <header>
+          <div class="logo-nav">
+            <img src="images/MooseLogo.webp" alt="Moose's Ice Hut Logo" class="logo" />
+            <nav aria-label="Main navigation">
+              <a href="moosehome.html">Home</a>
+              <a href="moosemenu.html">Menu</a>
+              <a href="moosecontact.html">Contact Us</a>
+              <a href="mooseschedule.html">Events</a>
+            </nav>
+          </div>
+        </header>
+
+  <main>
+    <section class="menu-section">
+      <h2>Our Menu</h2>
+      <img src="images/menu.webp" alt="Moose's Ice Hut Menu" class="menu-image">
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="accordion-item">
+        <button class="accordion-btn">Do you offer Sugar Free Flavors?</button>
+        <div class="accordion-content">
+          <p>Yes! Many of our flavors are sugar free! Just ask when you order and we can make that accomodation for you.</p>
+        </div>
       </div>
-    </div>
-  </section>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">What is your "Cream"?</button>
+        <div class="accordion-content">
+          <p>Sweet and Condensed Milk</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">Do you cater for parties?</button>
+        <div class="accordion-content">
+          <p>Absolutely! Contact us for private bookings and special event pricing.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Shaved Ice Mobile Trailer. All Rights Reserved.</p>
+    
+      <section class="follow-instagram">
+        <h2>Follow Us on Instagram</h2>
+        <p>Stay cool and see our latest snow cone creations, events, and behind-the-scenes fun!</p>
+        <a href="https://www.instagram.com/moosesicehut" target="_blank" class="btn insta-btn">Follow @moosesicehut</a>
+      </section>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p>© 2023 MOOSE'S ICE HUT</p>
+  
   </footer>
 
-  <script src="moose.js"></script>
+  <script src="scripts/moosemenu.js"></script>
 </body>
 </html>
+
